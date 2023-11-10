@@ -73,9 +73,9 @@ We welcome contributions from the community to help improve SignTalk. If you wou
 
 # 6.0 Future Enhancements
 
-- [ ] Support for multiple sign languages
-- [ ] Improved accuracy with deep learning optimizations
-- [ ] Mobile app for on-the-go interpretation
+- [ ] Support for multiple sign languages - Currently, the model can only detect signs like `I love you`, `Hello` and `Thank you`.
+- [ ] Improved accuracy with deep learning optimizations - The model is only trained on my facial and body features. To let it be universal for all users, I would need to train with more data and video clips.
+- [ ] Mobile app for on-the-go interpretation - For now, it is only executable from desktop terminal.
 - [ ] Integration with speech synthesis for two-way communication
 
 Your feedback and contributions are what will make SignTalk a powerful tool for breaking communication barriers. Join us in creating a world where everyone has the power to communicate freely.
