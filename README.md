@@ -5,6 +5,7 @@
 Communication is a fundamental human need. For the deaf and hard of hearing, sign language is a vital tool for daily communication. Yet, the majority of hearing people do not understand sign language, which creates a communication barrier.
 
 # 2.0 How it Works
+![Uploading Screenshot 2023-11-10 at 5.44.25 PM.png…]()
 
 ![Alt Text](/images/signTalkDemo.gif)
 
