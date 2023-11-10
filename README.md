@@ -5,7 +5,8 @@
 Communication is a fundamental human need. For the deaf and hard of hearing, sign language is a vital tool for daily communication. Yet, the majority of hearing people do not understand sign language, which creates a communication barrier.
 
 # 2.0 How it Works
-![Alt Text](/Images/MediaPipe_Tracking.png)
+![Using MediaPipe to track feature keypoints](/Images/MediaPipe_Tracking.png)
+![Interpretation `Hello`, `Thank you` and `ILoveYou`](/Images/SignTalk.gif)
 
 SignTalk is a real-time sign language detection system that bridges this gap. It utilizes advanced machine learning techniques, employing MediaPipe Holistic Keypoints to detect body language and hand signs, which are then processed by an LSTM-based action detection model to interpret the signs accurately.
 
