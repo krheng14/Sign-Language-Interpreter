@@ -20,11 +20,33 @@ Using a webcam, SignTalk captures live video feed and processes it in real-time.
 
 ## 3.2 LSTM-Powered Action Detection
 
-Our LSTM model analyzes temporal sequences of movements to understand and predict complex sign language gestures, ensuring accurate translation even for nuanced expressions.
+In SignTalk, our LSTM model is intricately designed to interpret sign language gestures with high accuracy. The model consists of a sequential neural network architecture specifically tuned to process time-series data of body and hand movements.
+
+### Model Architecture
+The LSTM model in SignTalk is built using the following layers:
+- **Input Layer**: The input to the model is a sequence of keypoints (total 1662 features per frame) representing the position and movement of various body parts. Each input sequence corresponds to a sign language gesture.
+- **LSTM Layers**: 
+  - The first LSTM layer has 64 nodes and returns sequences, allowing the subsequent LSTM layers to receive sequences of data.
+  - The second LSTM layer is composed of 128 nodes, also returning sequences.
+  - The third LSTM layer has 64 nodes and does not return sequences, effectively distilling the temporal information into a single context vector.
+- **Dense Layers**: 
+  - Following the LSTM layers, the model includes a dense layer with 64 nodes.
+  - Another dense layer follows with 32 nodes.
+  - Both these layers use ReLU (Rectified Linear Unit) as the activation function.
+- **Output Layer**: The final layer is a dense layer with a softmax activation function, corresponding to the number of actions (gestures) the model is trained to recognize.
+
+### Training Process
+- **Dataset**: For training, we capture 30 sequences for each hand sign, with each sequence comprising 30 frames. This comprehensive dataset ensures that the model learns a wide range of motion dynamics for each gesture.
+- **Epochs**: The model is trained for 2000 epochs, allowing it to iteratively learn and improve its accuracy in interpreting sign language gestures.
+- **Optimization and Loss Function**: The model uses the Adam optimizer and categorical cross-entropy as the loss function, which are standard choices for multi-class classification tasks.
 
 ## 3.3 TensorFlow and Keras Integration
 
-SignTalk is built using TensorFlow and Keras, harnessing their powerful neural network capabilities to learn and improve sign language interpretation over time with more data input.
+SignTalk is built using TensorFlow and Keras, harnessing their powerful neural network capabilities. TensorFlow provides the computational backbone, enabling efficient processing of our extensive dataset. Keras, with its user-friendly API, simplifies the implementation of our LSTM model, making the development process more intuitive and streamlined.
+
+Through TensorFlow and Keras, the LSTM model is meticulously trained on our dataset. This training involves feeding the sequences of keypoints into the model and optimizing its parameters through backpropagation. The comprehensive training enables the model to recognize and predict a wide range of sign language gestures accurately.
+
+Once trained, the model can make real-time predictions. As the MediaPipe Holistic model processes new video frames, the LSTM model interprets the sequences of keypoints and predicts the corresponding sign language gestures. This integration allows SignTalk to provide real-time, accurate sign language interpretation, facilitating effective communication for the deaf and hard-of-hearing community.
 
 # 4.0 How to Use
 
