@@ -52,7 +52,7 @@ pip install -r requirements.txt
 Once the environment is set up and dependencies are installed, you can run SignTalk using:
 
 ```
-python app.py
+python SignTalk.py /path/to/your/model.h5
 ```
 
 The application will start and you will be prompted to allow webcam access for real-time sign language detection.
